@@ -13,6 +13,7 @@ btns:Button(
     
     local plr = game.Players.LocalPlayer
 plr.Character.Humanoid.Health = 0
+        plr.Character.HumanoidRootPart.Position = plr.Character.HumanoidRootPart.Position + Vector3.new(0,500,0)
     spawn(function ()
         while wait() do
             local A_1 = "E"
@@ -29,6 +30,7 @@ Event:InvokeServer(A_1, A_2)
         while wait() do
             if plr.Character.Humanoid.Health == 0 then
                 wait(5)
+                        plr.Character.HumanoidRootPart.Position = plr.Character.HumanoidRootPart.Position + Vector3.new(0,500,0)
                 game.Players.LocalPlayer.Character.Head["Player_Topbar"].Holder.Display["IsDev"].Text = "script by qwertyczarevYT"
             game.Players.LocalPlayer.Character.Head["Player_Topbar"].Holder.Display["IsDev"].TextColor3 = Color3.new(1, 0, 0) 
             end
