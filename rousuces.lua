@@ -10,8 +10,9 @@ local btns = serv:Channel("Autofarm")
 btns:Button(
     "Autofarm",
     function()
-        
+    
     local plr = game.Players.LocalPlayer
+plr.Character.Humanoid.Health = 0
     spawn(function ()
         while wait() do
             local A_1 = "E"
@@ -27,15 +28,10 @@ Event:InvokeServer(A_1, A_2)
     spawn(function ()
         while wait() do
             if plr.Character.Humanoid.Health == 0 then
-                wait(10)
+                wait(5)
                 game.Players.LocalPlayer.Character.Head["Player_Topbar"].Holder.Display["IsDev"].Text = "script by qwertyczarevYT"
             game.Players.LocalPlayer.Character.Head["Player_Topbar"].Holder.Display["IsDev"].TextColor3 = Color3.new(1, 0, 0) 
             end
-        end
-    end)
-    spawn(function ()
-        while wait(25) do
-            plr.Character.Humanoid.Health = 0
         end
     end)
     game.Players.LocalPlayer.Character.Head["Player_Topbar"].Holder.Display["IsDev"].Text = "script by qwertyczarevYT"
@@ -44,7 +40,7 @@ Event:InvokeServer(A_1, A_2)
         wait()
         for i,v in pairs(game:GetService("Workspace").Game.Mobs:GetChildren()) do
             if game:WaitForChild(v) then
-                wait(2)
+                wait()
                 spawn(function ()
                     while wait() do
                         local A_1 = "Swing"
